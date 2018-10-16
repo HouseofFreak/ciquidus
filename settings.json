@@ -1,0 +1,170 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "AEVO",
+
+  "address": "144.202.86.219:80",
+
+  // coin name
+  "coin": "Aevo",
+
+  // coin symbol
+  "symbol": "AEVO",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Cerulean",
+
+  // port to listen for requests on.
+  "port" : 80,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "ciquidus",
+    "password": "3xp!0reR",
+    "database": "aevo",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 1234,
+    "user": "aevoaevo",
+    "pass": "oreo"
+  },
+
+  // confirmations
+  "confirmations": 40,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": true,
+    "richlist": true,
+    "twitter": true,
+    "facebook": false,
+    "googleplus": false,
+    "bitcointalk": false,
+    "website": false,
+    "slack": false,
+    "github": true,
+    "search": true,
+    "movement": true,
+    "network": true
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 1337,
+    "blockhash": "e1bf08bb31caad240d008406b8a22f3398a892f3876971b304bb98cbec8ffd70",
+    "txhash": "af504ac212c522cf4b0e5c2d0e235aa5026ca85a0fe92c0e4d73de444bb29874",
+    "address": "Aa9o78PENeFYwWPBR73UhQWVWMUkh6pG5e"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, graviex, cryptopia, ccex, coinexchange
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "AEVO",
+    "exchange": "BTC",
+    "enabled": ["graviex"],
+    "cryptopia_id": "2186",
+    "ccex_key" : "Get-Your-Own-Key",
+    "coinexchange_id": "18",
+    "default": "graviex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 100,
+    "low_flag": 1000,
+    "high_flag": 5000
+  },
+
+  // twitter, facebook, googleplus, bitcointalk, github, slack, website
+  "twitter": "aevocoin",
+  "facebook": "yourfacebookpage",
+  "googleplus": "yourgooglepluspage",
+  "bitcointalk": "yourbitcointalktopicvalue",
+  "github": "aevocommunity/aevocoin",
+  "slack": "yourfullslackinviteurl",
+  "website": "mining.evo.today",
+
+  //genesis
+  "genesis_tx": "28373a3462896350019f34aac43a6b80b66e14d75078c3b68cb3337abe8829cb",
+  "genesis_block": "bedc296640887d1a5b258b6684e5d3bc6b0c831817c716fea4d76a7223dcf9c3",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": true,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "BALANCES",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "netmhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "M",
+
+  // Address labels
+  // example : "CGTta3M4t3yXu8uRgkKvaWd2d8DQvDPnpL": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "CLkWg5YSLod772uLzsFRxHgHiWVGAJSezm": {"label": "Donation Address", "type":"primary", "url":"http://example.com"},
+  //  "CaxX1HVWzbQ516w61XbtHR63vNmp2mvLMZ": {"label": "Max Lee War Chest"}
+  }
+}
